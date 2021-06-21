@@ -1,0 +1,3 @@
+export const ADD_TO_DB_REQUEST = 'ADD_TO_DB_REQUEST'
+export const ADD_TO_DB_SUCCESS = 'ADD_TO_DB_SUCCESS'
+export const ADD_TO_DB_FAILURE = 'ADD_TO_DB_FAIURE'
