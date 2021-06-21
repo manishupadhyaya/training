@@ -10,7 +10,7 @@ It contains the React Project and all the dependencies associateed with it
 
 # Server
 
-It contains the Node Server and all the dependencies associateed with it
+It contains the Node Server and all the dependencies associated with it
 
 ## How to Run
 
