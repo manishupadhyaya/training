@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Store from '../redux/store'
 import NavBar from './NavBar'
+import {Container} from 'semantic-ui-react'
 class RecentlyAddedContainer extends Component{
     constructor(props)
     {
@@ -12,14 +13,23 @@ class RecentlyAddedContainer extends Component{
         return(
             <div>
                 <NavBar/>
-                <div>
-                    Name is: {this.state.name}
-                </div> 
-                <ul>
-                    {this.state.wishes.map((wish, i)=>{
-                        return <li key={i}>{wish}</li>
-                    })}
-                </ul>               
+                {(this.state.wishes.length!==0)?
+                (
+                    <Container>
+                    <div>
+                        <div>
+                            Name is: {this.state.name}
+                        </div> 
+                        <ul>
+                            Wishes are:<br/>
+                            {this.state.wishes.map((wish, i)=>{
+                                return <li key={i}>{wish}</li>
+                            })}
+                        </ul>
+                    </div>
+                    </Container>
+                ):
+                null}               
             </div>
         )
     }

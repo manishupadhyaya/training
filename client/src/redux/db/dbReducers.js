@@ -13,7 +13,32 @@ const dbReducer = (state = initialState, action) => {
                 ...state,
                 loading: true
             }
+        case UPDATE_TO_DB_REQUEST:
+            return {
+                ...state,
+                loading: true
+            }
         case ADD_TO_DB_SUCCESS: {
+            return{
+                loading: false,
+                successMessage: action.payload,
+                error: ''
+            }
+        }
+        case UPDATE_TO_DB_SUCCESS: {
+            return{
+                loading: false,
+                successMessage: action.payload,
+                error: ''
+            }
+        }
+        case ADD_TO_DB_FAILURE:
+            return{
+                loading: false,
+                successMessage: '',
+                error: action.payload
+            }
+        case UPDATE_TO_DB_SUCCESS: {
             return{
                 loading: false,
                 successMessage: action.payload,
